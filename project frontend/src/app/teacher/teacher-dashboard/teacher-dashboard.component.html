@@ -1,0 +1,28 @@
+<body>
+<div class="container">
+  <div><a href="#" class="nav-link" (click)="logout()" style="margin-left: 80vw; font-size: 18px; font-weight: 600; border: 2px;">Logout</a></div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+        <div class="col mb-auto mt-4" *ngFor="let chapter of chapters">
+          <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFeMhuevzyv6ioB3_YmyTAvbrFQXoKWJYzeg&usqp=CAU" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{chapter.title}}</h5>
+              <p class="card-text">{{chapter.description}}</p>
+              <a routerLink="/questions" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="btn btn-success">Manage Questions</a>
+              <div class="buttons">
+              <a routerLink="/students" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="btn btn-success mt-2">Manage Students</a>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-auto mt-10" style="padding-top: 10px;">
+            <div class="card">
+              <img src="../../../assets/add.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <a routerLink="/add_chapter" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="btn btn-outline-danger btn-sm btn-block">Add Chapter</a>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>

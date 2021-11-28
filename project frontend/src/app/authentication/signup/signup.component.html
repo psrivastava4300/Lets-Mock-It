@@ -1,0 +1,45 @@
+<div class="login">
+    <h2 class="login-header"> Register </h2>
+    <form [formGroup]="authForm" class="login-container" (ngSubmit)="signUp()">
+        <div style="display: flex; flex-direction: row; margin-left: 50px;">
+            <div style="margin-left: 38px; margin-top: 10px;">
+              <input id="teacher" type="radio" value="teacher" formControlName="selectedType">
+              <label for="teacher">Teacher</label>
+           </div>
+  
+           <div style="margin-left: 38px; margin-top: 10px;">
+              <input id="student" type="radio" value="student" formControlName="selectedType">
+              <label for="student">Student</label>
+           </div>
+        </div>
+        <div *ngIf="isSubmitted && formControls.selectedType.errors" class="help-block">
+            <div *ngIf="formControls.selectedType.errors.required">Choose an option</div>
+        </div>
+
+        <p [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
+            <input type="email" placeholder="Email" formControlName="email">
+        </p>
+        <div *ngIf="isSubmitted && formControls.email.errors" class="help-block">
+            <div *ngIf="formControls.email.errors.required">Email is required</div>
+        </div>
+
+        <p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }">
+            <input type="password" placeholder="Password" formControlName="password">
+        </p>
+        <div *ngIf="isSubmitted && formControls.password.errors" class="help-block">
+            <div *ngIf="formControls.password.errors.required">Password is required</div>
+        </div>
+
+        <p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }">
+            <input type="password" placeholder="Confirm Password" formControlName="confirmPassword">
+        </p>
+        <div *ngIf="isSubmitted && formControls.confirmPassword.errors" class="help-block">
+            <div *ngIf="formControls.confirmPassword.errors.required">Password is required</div>
+        </div>
+
+        <p>
+            <input type="submit" value="Register">
+        </p>
+        <p> Already Registered? <input class="btn btn-primary" type="button" (click)="login()" value="Login Here"> </p>
+    </form>
+</div>

@@ -1,0 +1,22 @@
+.questions {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.quest {
+    font-weight: 600;
+    font-size: large;
+}
+
+.options {
+    margin-top: 10px;
+}
+.option {
+    padding-top: 2.5px;
+    padding-left: 40px;
+}
+
+.btn {
+    margin-bottom: 50px;
+    margin-top: 10px;
+}

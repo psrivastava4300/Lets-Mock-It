@@ -1,0 +1,21 @@
+/* #sect1 {
+    background-image: url(../../../assets/dashboard.jpg);
+    background-image: tomato; 
+    background-repeat: repeat-x;
+    background-position: center;
+    background-attachment: scroll;
+    width: 100vw;
+} */
+.body {
+    background-image: url(../../../assets/dashboard.jpg);
+    /* background-repeat: no-repeat; */
+    background-attachment: scroll;
+}
+
+.btn {
+    font-size: 15px;
+    align-self: center;
+}
+.buttons {
+    margin-left: 3.25px;
+}

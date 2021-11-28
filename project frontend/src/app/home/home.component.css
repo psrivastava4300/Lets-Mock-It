@@ -1,0 +1,25 @@
+.text {
+    color: rgb(255, 255, 255, 0.5);
+    /* padding-block-end: 20px;
+    margin-right: auto; */
+    align-self: center;
+    float: right;
+    margin-right: 5px;
+}
+.align-right {
+    float: right;
+}
+
+.navbar {
+    padding: 2px 1px 15px 0px;
+    align-self: center;
+}
+
+.logo {
+    padding-left: 30px;
+    transform: rotate(35deg);
+}
+
+.links {
+    align-self: center;
+}

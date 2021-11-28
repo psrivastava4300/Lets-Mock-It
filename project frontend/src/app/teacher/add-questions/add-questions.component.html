@@ -1,0 +1,32 @@
+<button class="btn btn-success" (click)="openForm(content)" style="float: right;">Add question</button>
+  
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h5 class="modal-title" style="font-weight: bold;">Add new question</h5> 
+    </div>
+
+    <div class="modal-body">
+        <form>
+            <div class="container">
+              <div class="row col-3" style="margin-left: 10px; margin-top: 30px; font-weight: bold;"> Question</div>
+              <div class="row col-11" style="margin-left: 10px; margin-top: 10px;"><input type="text"></div>
+            </div>
+            <div class="container">
+              <div class="row col-3" style="margin-left: 10px; margin-top: 30px; font-weight: bold;"> Options</div>
+              <div class="row col-11" style="margin-left: 10px; margin-top: 10px;">A. <input type="text"></div>
+              <div class="row col-11" style="margin-left: 10px; margin-top: 10px;">B. <input type="text"></div>
+              <div class="row col-11" style="margin-left: 10px; margin-top: 10px;">C. <input type="text"></div>
+              <div class="row col-11" style="margin-left: 10px; margin-top: 10px;">D. <input type="text"></div>
+            </div>
+            <div class="container">
+              <div class="row col-3" style="margin-left: 10px; margin-top: 30px; font-weight: bold;"> Answer</div>
+              <div class="row col-11" style="margin-left: 10px; margin-top: 10px;"><input type="text"></div>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal-footer">
+        <button class="btn btn-primary" (click)="onSubmit()"> Save </button>
+      <button type="btn" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+    </div>
+</ng-template>

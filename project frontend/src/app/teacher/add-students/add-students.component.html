@@ -1,0 +1,25 @@
+<button class="btn btn-success" (click)="openForm(content)" style="float: right; margin-bottom: 10px; margin-right: 130px;">Add student</button>
+  
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h5 class="modal-title" style="font-weight: bold;">Add new student details</h5> 
+    </div>
+
+    <div class="modal-body">
+        <form>
+            <div class="row">
+              <div class="col-3" style="margin-left: 30px; font-weight: bold;"> Name</div>
+              <div class="col-5" style="margin-left: 20px;"><input type="text"></div>
+            </div>
+            <div class="row">
+              <div class="col-3" style="margin-left: 30px; margin-top: 30px; font-weight: bold;"> Email</div>
+              <div class="col-5" style="margin-left: 20px; margin-top: 30px;"><input type="email"></div>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal-footer">
+        <button class="btn btn-primary" (click)="onSubmit()"> Save </button>
+      <button type="btn" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+    </div>
+</ng-template>

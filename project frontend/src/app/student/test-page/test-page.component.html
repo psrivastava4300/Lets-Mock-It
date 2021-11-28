@@ -1,0 +1,15 @@
+<div class= "container">
+    <app-count-down></app-count-down>
+    <form>
+        <div class="quiz" *ngFor="let question of questions">
+            <div class = "questions">
+                <div class="quest">{{question.id+1}}. {{question.question}}</div>
+                <div class="options" *ngFor="let option of question.options">
+                    <div class="option"> <input type="radio" name="answer{{question.id}}"> {{option}} abcd </div>
+                </div>
+            </div>
+        </div>
+        <a routerLink="/result" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="btn btn-primary" style="float: right"> Finish Test </a>
+    </form>
+</div>
+<!-- [(ngModel)]="options[question.id]" [checked]="options[question.id]"  -->

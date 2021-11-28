@@ -1,0 +1,22 @@
+<div class="container">
+    <div >
+        <table class="table" style="margin-top: 50px;">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">S.No.</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let student of students">
+                <th scope="row">{{student.id + 1}}</th>
+                <td>{{student.name}}</td>
+                <td>{{student.email}}</td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+    <app-add-students></app-add-students>
+    <button class="btn btn-primary" (click)="navigate()" style="margin-top: 30px;">Go Back To Dashboard</button>
+</div>>

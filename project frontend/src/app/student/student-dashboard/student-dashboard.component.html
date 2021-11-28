@@ -1,0 +1,17 @@
+<body>
+    <div class="container">
+      <div><a href="#" class="nav-link" (click)="logout()" style="margin-left: 80vw; font-size: 18px; font-weight: 600; border: 2px;">Logout</a></div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+            <div class="col mb-auto mt-4" *ngFor="let chapter of chapters">
+              <div class="card">
+                <img src="https://classroomclipart.com/images/gallery/Clipart/School/student-sitting-at-desk-taking-state-test-clipart.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{chapter.title}}</h5>
+                  <p class="card-text">{{chapter.description}}</p>
+                  <a routerLink="/test_page" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="btn btn-outline-danger">Take the test!</a>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</body>
